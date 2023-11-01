@@ -33,7 +33,7 @@ def main(data_dir, train_flag):
 
     else:
         model = build_model()
-        model.load_weights('best_model2.h5')  # load pretrained weights
+        model.load_weights('best_model2.h5')  # load pretrained weights, change the model name accordingly.
         pred = model.predict(test_images)  # predict on test data
 
         # calculate test accuracy and confusion matrix
@@ -48,6 +48,6 @@ def main(data_dir, train_flag):
 
 
 if __name__ == '__main__':
-    dataset_dir = "GENKI-4K"
+    dataset_dir = "GENKI-4K"  # Give the path to the root folder of the dataset.
     train = False  # True for training mode
     main(dataset_dir, train)
